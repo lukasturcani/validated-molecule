@@ -1,5 +1,5 @@
 :author: Lukas Turcani
-:documentation: https://pursuit.purescript.org/packages/purescript-validated-molecule
+:Documentation: https://pursuit.purescript.org/packages/purescript-validated-molecule
 
 ==================
 validated-molecule
