@@ -1,0 +1,23 @@
+{
+    "name": "purescript-validated-molecule",
+    "license": [
+        "MIT"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lukasturcani/validated-molecule"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "output"
+    ],
+    "dependencies": {
+        "purescript-arrays": "^v5.3.1",
+        "purescript-console": "^v4.4.0",
+        "purescript-effect": "^v2.0.1",
+        "purescript-lists": "^v5.4.1",
+        "purescript-psci-support": "^v4.0.0"
+    }
+}
