@@ -13,7 +13,7 @@ position :: Number -> Number -> Number -> Position
 position = Position
 
 toArray :: Position -> Array Number
-toArray (Position x y z) = [x, y, z]
+toArray (Position _x _y _z) = [_x, _y, _z]
 
 x :: Position -> Number
 x (Position _x _ _) = _x
