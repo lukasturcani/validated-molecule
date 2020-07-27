@@ -1,4 +1,4 @@
-module ValidatedMolecule.Internal.Position
+module ValidatedMolecule.Position
     ( Position
     , position
     , toArray
