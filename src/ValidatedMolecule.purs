@@ -1,7 +1,8 @@
+-- | Allows the creation of validated molecular structures.
+
 module ValidatedMolecule
     ( module Exports
     , atom
-    , getPosition
     , bond
     , molecule
     , atoms
@@ -15,9 +16,9 @@ module ValidatedMolecule
     ) where
 
 import Data.Maybe (Maybe)
+import ValidatedMolecule.Position (Position)
 import ValidatedMolecule.Internal.Atom (Atom) as Exports
 import ValidatedMolecule.Internal.Bond (Bond) as Exports
-import ValidatedMolecule.Internal.Position (Position) as Exports
 
 import ValidatedMolecule.Internal.ChemicalSymbol
     ( ChemicalSymbol (..)
@@ -44,10 +45,6 @@ import ValidatedMolecule.Internal.BondOrder
     ( BondOrder
     ) as BondOrder
 
-import ValidatedMolecule.Internal.Position
-    ( position
-    ) as Position
-
 import ValidatedMolecule.Internal.Molecule
     ( molecule
     , atoms
@@ -60,9 +57,11 @@ import ValidatedMolecule.Internal.Molecule
     , position
     ) as Molecule
 
-atom :: Exports.ChemicalSymbol -> Exports.Position -> Exports.Atom
+-- | Create an `Atom`.
+atom :: Exports.ChemicalSymbol -> Position -> Exports.Atom
 atom = Atom.atom
 
+-- | Create a `Bond`
 bond
     :: BondOrder.BondOrder
     -> Bond.Atom1Id
@@ -71,6 +70,7 @@ bond
 
 bond = Bond.bond
 
+-- | Create a validated molecule.
 molecule
     :: Array Exports.Atom
     -> Array Exports.Bond
@@ -78,29 +78,34 @@ molecule
 
 molecule = Molecule.molecule
 
+-- | Get the atoms of a molecule.
 atoms :: Exports.Molecule -> Array Exports.MoleculeAtom
 atoms = Molecule.atoms
 
+-- | Get the bonds of a molecule.
 bonds :: Exports.Molecule -> Array Exports.MoleculeBond
 bonds = Molecule.bonds
 
+-- | Get the first atom of a bond.
 atom1 :: Exports.MoleculeBond -> Exports.MoleculeAtom
 atom1 = Molecule.atom1
 
+-- | Get the second atom of a bond.
 atom2 :: Exports.MoleculeBond -> Exports.MoleculeAtom
 atom2 = Molecule.atom2
 
+-- | Get the bond order of a bond.
 order :: Exports.MoleculeBond -> BondOrder.BondOrder
 order = Molecule.order
 
+-- | Get the id of an atom.
 id :: Exports.MoleculeAtom -> Exports.AtomId
 id = Molecule.id
 
+-- | Get the chemical symbol of an atom.
 chemicalSymbol :: Exports.MoleculeAtom -> Exports.ChemicalSymbol
 chemicalSymbol = Molecule.chemicalSymbol
 
-position :: Exports.MoleculeAtom -> Exports.Position
+-- | Get the position of an atom.
+position :: Exports.MoleculeAtom -> Position
 position = Molecule.position
-
-getPosition :: Number -> Number -> Number -> Exports.Position
-getPosition = Position.position

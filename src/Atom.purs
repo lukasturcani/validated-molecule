@@ -5,7 +5,7 @@ module ValidatedMolecule.Internal.Atom
     , position
     ) where
 
-import ValidatedMolecule.Internal.Position (Position)
+import ValidatedMolecule.Position (Position)
 import ValidatedMolecule.Internal.ChemicalSymbol (ChemicalSymbol)
 
 data Atom = Atom
