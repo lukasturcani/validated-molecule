@@ -18,25 +18,3 @@ atoms and bonds are constructed as a result.
 Installation
 ============
 
-Add the following to your spago ``packages.dhall`` file
-
-.. _spago: https://github.com/purescript/spago#add-a-package-to-the-package-set
-
-.. code-block:: dhall
-
-    let additions =
-        { validated-molecule =
-            { dependencies =
-                [ "arrays"
-                , "lists"
-                ]
-            , repo =
-                "https://github.com/lukasturcani/validated-molecule"
-            , version =
-                "v1.0.0"
-            }
-        }
-
-Then run::
-
-    $ spago install validated-molecule
