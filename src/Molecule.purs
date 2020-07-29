@@ -22,7 +22,7 @@ import Data.Foldable (foldM)
 import ValidatedMolecule.Position (Position)
 import ValidatedMolecule.Internal.Atom as Atom
 import ValidatedMolecule.Internal.Bond as Bond
-import ValidatedMolecule.Internal.ChemicalSymbol (ChemicalSymbol)
+import ValidatedMolecule.ChemicalSymbol (ChemicalSymbol)
 import ValidatedMolecule.Internal.BondOrder (BondOrder)
 
 data Molecule = Molecule

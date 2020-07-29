@@ -6,7 +6,7 @@ module ValidatedMolecule.Internal.Atom
     ) where
 
 import ValidatedMolecule.Position (Position)
-import ValidatedMolecule.Internal.ChemicalSymbol (ChemicalSymbol)
+import ValidatedMolecule.ChemicalSymbol (ChemicalSymbol)
 
 data Atom = Atom
     { _chemicalSymbol :: ChemicalSymbol
