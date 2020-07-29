@@ -1,4 +1,4 @@
-module ValidatedMolecule.Internal.ChemicalSymbol
+module ValidatedMolecule.ChemicalSymbol
     ( ChemicalSymbol (..)
     , chemicalSymbol
     ) where

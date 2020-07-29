@@ -20,9 +20,7 @@ import ValidatedMolecule.Position (Position)
 import ValidatedMolecule.Internal.Atom (Atom) as Exports
 import ValidatedMolecule.Internal.Bond (Bond) as Exports
 
-import ValidatedMolecule.Internal.ChemicalSymbol
-    ( ChemicalSymbol (..)
-    ) as Exports
+import ValidatedMolecule.ChemicalSymbol as ChemicalSymbol
 
 import ValidatedMolecule.Internal.Molecule
     ( Molecule
@@ -58,7 +56,7 @@ import ValidatedMolecule.Internal.Molecule
     ) as Molecule
 
 -- | Create an `Atom`.
-atom :: Exports.ChemicalSymbol -> Position -> Exports.Atom
+atom :: ChemicalSymbol.ChemicalSymbol -> Position -> Exports.Atom
 atom = Atom.atom
 
 -- | Create a `Bond`
@@ -103,7 +101,7 @@ id :: Exports.MoleculeAtom -> Exports.AtomId
 id = Molecule.id
 
 -- | Get the chemical symbol of an atom.
-chemicalSymbol :: Exports.MoleculeAtom -> Exports.ChemicalSymbol
+chemicalSymbol :: Exports.MoleculeAtom -> ChemicalSymbol.ChemicalSymbol
 chemicalSymbol = Molecule.chemicalSymbol
 
 -- | Get the position of an atom.
