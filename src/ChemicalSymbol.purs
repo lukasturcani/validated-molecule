@@ -339,4 +339,3 @@ atomicNumber Sg  = 106
 atomicNumber Bh  = 107
 atomicNumber Hs  = 108
 atomicNumber Mt  = 109
-atomicNumber  _  = Nothing
