@@ -18,3 +18,6 @@ atoms and bonds are constructed as a result.
 Installation
 ============
 
+To install use ``spago``::
+
+    $ spago install validated-molecule
